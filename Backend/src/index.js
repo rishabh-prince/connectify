@@ -19,7 +19,7 @@ app.use(
   cors({
     origin:
       process.env.NODE_ENV === "production"
-        ? "https://connectify-1-9l9y.onrender.com"
+        ? "https://connectify111.onrender.com"
         : "http://localhost:5173",
     credentials: true,
   })
