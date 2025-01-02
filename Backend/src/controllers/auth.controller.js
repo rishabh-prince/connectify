@@ -50,7 +50,6 @@ export const signup = async (req, res) => {
 };
 
 export const login = async (req, res) => {
-  // res.send("login route");
   const { email, password } =req.body;
   try{
     const user=await User.findOne({email});
@@ -68,11 +67,11 @@ export const login = async (req, res) => {
          });
     }
     else{
-      return res.status(400).json({message : "Inavalid credentials"});
+      return res.status(400).json({message : "Invalid credentials"});
     }
   }
   else{
-    return res.status(400).json({ message: "Inavalid credentials" });
+    return res.status(400).json({ message: "Invalid credentials" });
   }
 
   }

@@ -60,7 +60,6 @@ export const sendMessage = async (req,res)=>{
             io.to(receiverSocketId).emit("newMessage",newMessage);
         }
         res.status(201).json(newMessage);
-        // real time functinality goes here socket.io
     } catch (error) {
         console.log("error in sendMessage controller ", error.message);
         res.status(500).json({ error: "internal server error" });
